@@ -23,4 +23,9 @@ body {
 
 .removelater {
   display: inline-flex;
+  background: red;
+}
+
+.removelater:hover {
+  background: green;
 }

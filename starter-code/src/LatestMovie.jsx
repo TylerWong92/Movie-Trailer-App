@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import DisplayMovie from "./DisplayMovie";
 
 const LatestMovie = (props) => {
+  const [movieId, setMovieId] = useState(null);
+
+  const handleHover = (id) => {
+    setMovieId(id);
+  };
+
   return (
     <div>
       <h1>Now Playing Movie</h1>
@@ -8,23 +15,27 @@ const LatestMovie = (props) => {
       <h1>
         {props.nowPlaying?.results.map((d) => {
           return (
-            <section className="removelater" key={d.id}>
+            <section
+              className="removelater"
+              onMouseEnter={() => handleHover(d.id)}
+              key={d.id}
+            >
               <div key={d.id}>
                 <img
-                  src={`https://image.tmdb.org/t/p/w300/${
+                  src={`https://image.tmdb.org/t/p/w200/${
                     d.poster_path || d.backdrop_path
                   }`}
                   alt={d.title}
                 />
-                <h2>{d.title}</h2>
-                <h2>{d.popularity}</h2>
-                <h2>{d.vote_average}</h2>
-                {d.id}
+                <h6>{d.title}</h6>
+                <h6>{d.popularity}</h6>
+                <h6>{d.vote_average}</h6>
               </div>
             </section>
           );
         })}
       </h1>
+      <DisplayMovie id={movieId} />
     </div>
   );
 };
