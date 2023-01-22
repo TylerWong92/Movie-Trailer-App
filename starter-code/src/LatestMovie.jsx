@@ -19,6 +19,7 @@ const LatestMovie = (props) => {
                 <h2>{d.title}</h2>
                 <h2>{d.popularity}</h2>
                 <h2>{d.vote_average}</h2>
+                {d.id}
               </div>
             </section>
           );

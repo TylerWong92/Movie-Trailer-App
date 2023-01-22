@@ -1,4 +1,5 @@
 import React from "react";
+import DisplayMovie from "./DisplayMovie";
 import useFetch from "./hook/useFetch";
 import LatestMovie from "./LatestMovie";
 
@@ -17,6 +18,7 @@ function App() {
       <h2>Featured Video</h2>
       <LatestMovie nowPlaying={data} />
       <button onClick={refetch}>Refetch</button>
+      <DisplayMovie />
     </div>
   );
 }
