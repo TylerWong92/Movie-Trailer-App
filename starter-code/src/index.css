@@ -12,13 +12,16 @@ body {
   margin: 0;
   background-color: whitesmoke;
 }
-
 .centered {
   margin: 3rem auto;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.homepage {
+  width: auto;
+  height: 60vh;
 }
 
 .removelater {
@@ -28,4 +31,12 @@ body {
 
 .removelater:hover {
   background: green;
+}
+.youtube {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: black;
 }

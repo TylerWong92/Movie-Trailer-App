@@ -2,6 +2,8 @@ import React from "react";
 import DisplayMovie from "./DisplayMovie";
 import useFetch from "./hook/useFetch";
 import LatestMovie from "./LatestMovie";
+// Import Css
+import "./App.css";
 
 function App() {
   const api = "35358a0b33df9cdbafd8ad11d7ad3049";
@@ -14,11 +16,9 @@ function App() {
   if (error) console.log(error);
 
   return (
-    <div>
-      <h2>Featured Video</h2>
+    <div className="mainDiv">
       <LatestMovie nowPlaying={data} />
       <button onClick={refetch}>Refetch</button>
-      <DisplayMovie />
     </div>
   );
 }
