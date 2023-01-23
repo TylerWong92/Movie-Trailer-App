@@ -1,5 +1,5 @@
 import React from "react";
-import DisplayMovie from "./DisplayMovie";
+import MovieCover from "./components/MovieCover";
 import useFetch from "./hook/useFetch";
 import LatestMovie from "./LatestMovie";
 
@@ -15,6 +15,7 @@ function App() {
 
   return (
     <div>
+      <MovieCover />
       <LatestMovie nowPlaying={data} />
     </div>
   );
