@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;500;600;700&display=swap");
 
 .nav {
-  background-color: red;
+  background-color: rgb(17, 17, 17);
   position: sticky;
   top: 0;
   width: 100%;
@@ -16,17 +16,27 @@
     rgba(0, 0, 0, 0.6) 0%,
     rgba(0, 0, 0, 0) 90%
   );
-  z-index: 99;
+  z-index: -1;
+  position: relative;
 }
 .youtube iframe {
 }
 .sectiontitle {
-  margin: 20px;
-  padding: 5px;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: medium;
+  color: #fff;
+  text-shadow: 0 0 7px #fff;
+  margin-left: 30px;
 }
 .latestList {
-  display: flex; /* display the component in a row */
-  width: 100%; /* the width of the container is 100% */
+  display: flex;
+  width: 100%;
   justify-content: space-between;
   margin: 20px;
+}
+.testing {
+  background-image: linear-gradient(rgba(255, 0, 0, 0), rgb(0, 0, 0));
+
+  z-index: 1;
 }

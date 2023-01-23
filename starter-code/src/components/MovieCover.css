@@ -16,10 +16,20 @@ h2 {
 }
 .movieTitle {
   width: 100%;
+  font-family: Poppins;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: small;
+  color: #fff;
 }
 .trending {
   display: inline-flex;
   margin: 0.2rem;
+  font-family: Poppins;
+  font-weight: 200;
+  text-transform: capitalize;
+  font-size: small;
+  color: rgb(255, 255, 255);
 }
 .badge {
   background-color: red;

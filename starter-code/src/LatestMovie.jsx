@@ -10,7 +10,7 @@ const LatestMovie = (props) => {
   };
 
   return (
-    <div>
+    <div className="testing">
       <DisplayMovie id={movieId} />
       <h1 className="sectiontitle">Latest Showing</h1>
       <section className="latestList">
