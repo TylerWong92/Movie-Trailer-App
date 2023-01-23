@@ -15,7 +15,7 @@ const DisplayMovie = (props) => {
   });
   /// key return arrays of video link, movieLink[0] display just the first video
   return (
-    <div className="youtube">
+    <div>
       {data ? (
         <iframe
           width="100%"

@@ -9,16 +9,12 @@ const LatestMovie = (props) => {
   };
 
   return (
-    <div className="homepage">
-      <DisplayMovie className="video" id={movieId} />
+    <div>
+      <DisplayMovie id={movieId} />
       <h1>Now Playing Movie</h1>
       {props.nowPlaying?.results.map((d) => {
         return (
-          <section
-            className="removelater"
-            onMouseEnter={() => handleHover(d.id)}
-            key={d.id}
-          >
+          <section onMouseEnter={() => handleHover(d.id)} key={d.id}>
             <div key={d.id}>
               <img
                 src={`https://image.tmdb.org/t/p/w200/${
