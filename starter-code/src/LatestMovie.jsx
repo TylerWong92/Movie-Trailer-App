@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import MovieCover from "./components/MovieCover";
 import DisplayMovie from "./DisplayMovie";
 
 const LatestMovie = (props) => {
@@ -16,15 +17,14 @@ const LatestMovie = (props) => {
         return (
           <section onMouseEnter={() => handleHover(d.id)} key={d.id}>
             <div key={d.id}>
-              <img
-                src={`https://image.tmdb.org/t/p/w200/${
+              <MovieCover
+                poster={`https://image.tmdb.org/t/p/w200/${
                   d.poster_path || d.backdrop_path
                 }`}
-                alt={d.title}
+                title={d.title}
+                popularity={d.popularity}
+                rating={d.vote_average}
               />
-              <h6>{d.title}</h6>
-              <h6>{d.popularity}</h6>
-              <h6>{d.vote_average}</h6>
             </div>
           </section>
         );
