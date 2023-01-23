@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;500;600;700&display=swap");
 
-.latestList {
-  display: flex; /* display the component in a row */
-  width: 100%; /* the width of the container is 100% */
-  justify-content: space-between;
-}
 .nav {
   background-color: red;
   position: sticky;
@@ -13,43 +8,25 @@
   margin-top: -50px;
   padding: 20px;
 }
-/* * {
-  box-sizing: border-box;
-}
-
-html {
-  font-family: "Oxygen", sans-serif;
-}
-
-body {
-  margin: 0;
-  background-color: whitesmoke;
-}
-.centered {
-  margin: 3rem auto;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.homepage {
-  width: auto;
-  height: 60vh;
-}
-
-.removelater {
-  display: inline-flex;
-  background: red;
-}
-
-.removelater:hover {
-  background: green;
-}
 .youtube {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  background: black;
-} */
+  margin-top: -50px;
+  height: 60vh;
+  background: radial-gradient(
+    ellipse at top left,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0) 90%
+  );
+  z-index: 99;
+}
+.youtube iframe {
+}
+.sectiontitle {
+  margin: 20px;
+  padding: 5px;
+}
+.latestList {
+  display: flex; /* display the component in a row */
+  width: 100%; /* the width of the container is 100% */
+  justify-content: space-between;
+  margin: 20px;
+}

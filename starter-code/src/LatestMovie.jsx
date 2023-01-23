@@ -12,7 +12,7 @@ const LatestMovie = (props) => {
   return (
     <div>
       <DisplayMovie id={movieId} />
-      <h1>Latest Showing</h1>
+      <h1 className="sectiontitle">Latest Showing</h1>
       <section className="latestList">
         {props.nowPlaying?.results.map((d) => {
           return (

@@ -1,9 +1,4 @@
 .movieCard {
-  /* display: flex;
-  flex-wrap: wrap;
-  background: #343434;
-  max-width: 25%; */
-  width: 100%; /* 25% of the screen width */
   display: inline-block;
 }
 .cover {

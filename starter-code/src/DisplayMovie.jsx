@@ -19,8 +19,8 @@ const DisplayMovie = (props) => {
       {data ? (
         <iframe
           width="100%"
-          height="800px"
-          src={`https://www.youtube.com/embed/${movieLink[0]}?&autoplay=1&controls=0&showinfo=0&modestbranding=1&loop=1&rel=0`}
+          height="900px"
+          src={`https://www.youtube.com/embed/${movieLink[0]}?&autoplay=1&controls=0&showinfo=0&modestbranding=1&loop=1&rel=0&vq=hd720`}
         />
       ) : (
         "No Video Available"
