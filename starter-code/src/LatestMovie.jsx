@@ -3,7 +3,7 @@ import MovieCover from "./components/MovieCover";
 import DisplayMovie from "./DisplayMovie";
 
 const LatestMovie = (props) => {
-  const [movieId, setMovieId] = useState(null);
+  const [movieId, setMovieId] = useState("315162");
 
   const handleHover = (id) => {
     setMovieId(id);
@@ -16,7 +16,7 @@ const LatestMovie = (props) => {
       <section className="latestList">
         {props.nowPlaying?.results.map((d) => {
           return (
-            <div onMouseEnter={() => handleHover(d.id)} key={d.id}>
+            <div onClick={() => handleHover(d.id)} key={d.id}>
               <React.Fragment key={d.id}>
                 <MovieCover
                   poster={`https://image.tmdb.org/t/p/w200/${

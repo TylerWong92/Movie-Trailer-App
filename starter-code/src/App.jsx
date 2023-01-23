@@ -15,6 +15,7 @@ function App() {
 
   return (
     <div className="home">
+      <h1 className="nav">header nav bar</h1>
       <LatestMovie nowPlaying={data} />
     </div>
   );

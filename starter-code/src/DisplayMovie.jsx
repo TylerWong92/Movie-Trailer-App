@@ -15,17 +15,17 @@ const DisplayMovie = (props) => {
   });
   /// key return arrays of video link, movieLink[0] display just the first video
   return (
-    <div>
+    <section className="youtube">
       {data ? (
         <iframe
           width="100%"
           height="800px"
-          src={`https://www.youtube.com/embed/${movieLink[0]}?&autoplay=1&controls=0&showinfo=0&modestbranding=1&loop=1`}
+          src={`https://www.youtube.com/embed/${movieLink[0]}?&autoplay=1&controls=0&showinfo=0&modestbranding=1&loop=1&rel=0`}
         />
       ) : (
         "No Video Available"
       )}
-    </div>
+    </section>
   );
 };
 

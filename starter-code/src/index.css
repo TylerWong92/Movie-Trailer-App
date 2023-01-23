@@ -5,7 +5,14 @@
   width: 100%; /* the width of the container is 100% */
   justify-content: space-between;
 }
-
+.nav {
+  background-color: red;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  margin-top: -50px;
+  padding: 20px;
+}
 /* * {
   box-sizing: border-box;
 }
