@@ -1,5 +1,5 @@
 import React from "react";
-import useFetch from "./hook/useFetch";
+import useFetch from "../hook/useFetch";
 
 const DisplayMovie = (props) => {
   //Fetch Movie Trailer - 1. Hero section 2. on hover card

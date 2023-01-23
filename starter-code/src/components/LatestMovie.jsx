@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import MovieCover from "./components/MovieCover";
+import MovieCover from "./MovieCover";
 import DisplayMovie from "./DisplayMovie";
 
 const LatestMovie = (props) => {
@@ -12,7 +12,7 @@ const LatestMovie = (props) => {
   return (
     <div className="testing">
       <DisplayMovie id={movieId} />
-      <h1 className="sectiontitle">Latest Showing</h1>
+      <h1 className="sectiontitle">Now Showing</h1>
       <section className="latestList">
         {props.nowPlaying?.results.map((d) => {
           return (
