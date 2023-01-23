@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;500;600;700&display=swap");
 
+.latestList {
+  display: flex; /* display the component in a row */
+  width: 100%; /* the width of the container is 100% */
+  justify-content: space-between;
+}
+
 /* * {
   box-sizing: border-box;
 }

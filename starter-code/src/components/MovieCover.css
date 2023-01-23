@@ -1,15 +1,20 @@
 .movieCard {
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
   background: #343434;
-  max-width: 25%;
+  max-width: 25%; */
+  width: 100%; /* 25% of the screen width */
+  display: inline-block;
 }
 .cover {
   margin: 0.5rem;
-  width: 100%;
-  height: 100%;
+  width: 200px;
+  height: 300px;
   object-fit: cover;
   border-radius: 0.3rem;
+}
+h2 {
+  font-size: 1rem;
 }
 .movieDetail {
   margin: 0.8rem;

@@ -14,7 +14,7 @@ function App() {
   if (error) console.log(error);
 
   return (
-    <div>
+    <div className="home">
       <LatestMovie nowPlaying={data} />
     </div>
   );

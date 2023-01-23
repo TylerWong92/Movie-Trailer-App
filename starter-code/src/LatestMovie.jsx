@@ -12,23 +12,25 @@ const LatestMovie = (props) => {
   return (
     <div>
       <DisplayMovie id={movieId} />
-      <h1>Now Playing Movie</h1>
-      {props.nowPlaying?.results.map((d) => {
-        return (
-          <section onMouseEnter={() => handleHover(d.id)} key={d.id}>
-            <div key={d.id}>
-              <MovieCover
-                poster={`https://image.tmdb.org/t/p/w200/${
-                  d.poster_path || d.backdrop_path
-                }`}
-                title={d.title}
-                popularity={d.popularity}
-                rating={d.vote_average}
-              />
+      <h1>Latest Showing</h1>
+      <section className="latestList">
+        {props.nowPlaying?.results.map((d) => {
+          return (
+            <div onMouseEnter={() => handleHover(d.id)} key={d.id}>
+              <React.Fragment key={d.id}>
+                <MovieCover
+                  poster={`https://image.tmdb.org/t/p/w200/${
+                    d.poster_path || d.backdrop_path
+                  }`}
+                  title={d.title}
+                  popularity={d.popularity}
+                  rating={d.vote_average}
+                />
+              </React.Fragment>
             </div>
-          </section>
-        );
-      })}
+          );
+        })}
+      </section>
     </div>
   );
 };
