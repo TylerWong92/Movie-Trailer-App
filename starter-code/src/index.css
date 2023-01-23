@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +13,7 @@
 }
 .youtube {
   margin-top: -50px;
-  height: 60vh;
+  height: 65vh;
   background: radial-gradient(
     ellipse at top left,
     rgba(0, 0, 0, 0.6) 0%,

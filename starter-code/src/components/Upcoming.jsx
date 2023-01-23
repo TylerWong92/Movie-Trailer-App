@@ -22,8 +22,7 @@ const LatestMovie = () => {
                     d.poster_path || d.backdrop_path
                   }`}
                   title={d.title}
-                  popularity={d.popularity}
-                  rating={d.vote_average}
+                  releaseDate={d.release_date}
                 />
               </React.Fragment>
             </div>

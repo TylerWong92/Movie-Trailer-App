@@ -1,6 +1,13 @@
 .movieCard {
   display: inline-block;
 }
+.movieCard:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+}
+.movieCard:active {
+  border: 1px solid white;
+}
 .cover {
   margin: 0.5rem;
   width: 200px;
@@ -8,6 +15,10 @@
   object-fit: cover;
   border-radius: 0.3rem;
 }
+.cover:hover {
+  box-shadow: 0px 0px 53px rgba(255, 255, 255, 0.189);
+}
+
 h2 {
   font-size: 1rem;
 }
@@ -26,11 +37,12 @@ h2 {
   display: inline-flex;
   margin: 0.2rem;
   font-family: Poppins;
-  font-weight: 200;
+  font-weight: 300;
   text-transform: capitalize;
   font-size: small;
-  color: rgb(255, 255, 255);
+  color: rgb(149, 149, 149);
 }
 .badge {
-  background-color: red;
+  background-color: #1e1e1e;
+  border: 1px solid #343434;
 }

@@ -7,8 +7,11 @@ const MovieCover = (props) => {
       <img className="cover" src={props.poster} />
       <div className="movieDetail">
         <h2 className="movieTitle">{props.title}</h2>
-        <h5 className="badge">{props.rating}</h5>
-        <h5 className="trending">Trending</h5>
+        {props.rating && <h5 className="badge">{props.rating}</h5>}
+        {props.popularity && <h5 className="trending">{props.popularity}</h5>}
+        {props.releaseDate && (
+          <h5 className="releaseDate">{props.releaseDate}</h5>
+        )}
       </div>
     </div>
   );

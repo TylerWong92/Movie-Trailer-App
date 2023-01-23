@@ -3,12 +3,12 @@ import MovieCover from "./MovieCover";
 import DisplayMovie from "./DisplayMovie";
 
 const LatestMovie = (props) => {
-  const [movieId, setMovieId] = useState("315162");
+  const [movieId, setMovieId] = useState("76600");
 
-  const handleHover = (id) => {
+  const handleClick = (id) => {
     setMovieId(id);
   };
-
+  console.log(`movie id ${movieId}`);
   return (
     <div className="testing">
       <DisplayMovie id={movieId} />
@@ -16,7 +16,7 @@ const LatestMovie = (props) => {
       <section className="latestList">
         {props.nowPlaying?.results.map((d) => {
           return (
-            <div onClick={() => handleHover(d.id)} key={d.id}>
+            <div onClick={() => handleClick(d.id)} key={d.id}>
               <React.Fragment key={d.id}>
                 <MovieCover
                   poster={`https://image.tmdb.org/t/p/w200/${
