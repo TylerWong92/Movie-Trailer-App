@@ -12,7 +12,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/movieinner/:moviename" element={<MovieInner />} />
+          <Route path="/movieinner/" element={<MovieInner />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </Router>
@@ -21,4 +21,3 @@ function App() {
 }
 
 export default App;
-// <button onClick={refetch}>Refetch</button>
