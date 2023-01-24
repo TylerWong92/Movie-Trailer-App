@@ -3,6 +3,7 @@ import MovieCover from "./components/MovieCover";
 import useFetch from "./hook/useFetch";
 import LatestMovie from "./components/LatestMovie";
 import Upcoming from "./components/Upcoming";
+import { MovieCarousel } from "./components/Carousel/Carousel";
 
 function App() {
   const api = "35358a0b33df9cdbafd8ad11d7ad3049";
@@ -18,6 +19,7 @@ function App() {
     <div className="home">
       <h1 className="nav">header nav bar</h1>
       <LatestMovie nowPlaying={data} />
+      <MovieCarousel />
       <Upcoming />
     </div>
   );
