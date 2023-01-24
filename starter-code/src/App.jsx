@@ -19,7 +19,7 @@ function App() {
     <div className="home">
       <h1 className="nav">header nav bar</h1>
       <LatestMovie nowPlaying={data} />
-      <MovieCarousel />
+      <MovieCarousel nowPlaying={data} />
       <Upcoming />
     </div>
   );

@@ -1,36 +1,43 @@
 import Slider from "react-slick";
 import "./Carousel.css";
 import "./CarouselTheme.css";
+import React, { useState } from "react";
+import DisplayMovie from "../DisplayMovie";
+import MovieCover from "../MovieCover";
 
-export const MovieCarousel = () => {
+export const MovieCarousel = (props) => {
+  const [movieId, setMovieId] = useState("76600");
+
+  const handleClick = (id) => {
+    setMovieId(id);
+  };
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToShow: 5,
+    slidesToScroll: 5,
   };
 
   return (
     <Slider {...settings}>
-      <div>
-        <h3>1</h3>
-      </div>
-      <div>
-        <h3>2</h3>
-      </div>
-      <div>
-        <h3>3</h3>
-      </div>
-      <div>
-        <h3>4</h3>
-      </div>
-      <div>
-        <h3>5</h3>
-      </div>
-      <div>
-        <h3>6</h3>
-      </div>
+      {props.nowPlaying?.results.map((d) => {
+        return (
+          <div onClick={() => handleClick(d.id)} key={d.id}>
+            <React.Fragment key={d.id}>
+              <MovieCover
+                poster={`https://image.tmdb.org/t/p/w200/${
+                  d.poster_path || d.backdrop_path
+                }`}
+                title={d.title}
+                popularity={d.popularity}
+                rating={d.vote_average}
+              />
+            </React.Fragment>
+          </div>
+        );
+      })}
     </Slider>
   );
 };
