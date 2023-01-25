@@ -4,6 +4,7 @@ import "./CarouselTheme.css";
 import React, { useState } from "react";
 import DisplayMovie from "../DisplayMovie";
 import MovieCover from "../MovieCover";
+import { useNavigate } from "react-router-dom";
 
 export const MovieCarousel = (props) => {
   const [movieId, setMovieId] = useState("76600");

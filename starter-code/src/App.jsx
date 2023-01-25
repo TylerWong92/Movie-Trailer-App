@@ -6,6 +6,10 @@ import ErrorPage from "./pages/ErrorPage";
 import NavBar from "./components/NavBar/NavBar";
 
 function App() {
+  const getMovieId = (data) => {
+    console.log(data);
+  };
+
   return (
     <div className="home">
       <Router>

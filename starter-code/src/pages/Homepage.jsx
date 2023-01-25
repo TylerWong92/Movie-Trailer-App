@@ -14,14 +14,10 @@ const Homepage = () => {
   if (loading) return <h1> LOADING... </h1>;
   if (error) console.log(error);
 
-  const getMovieId = (data) => {
-    console.log(data);
-  };
-
   return (
     <div className="home">
       <LatestMovie nowPlaying={data} />
-      <MovieCarousel nowPlaying={data} onSelection={getMovieId} />
+      <MovieCarousel nowPlaying={data} />
       <Upcoming />
     </div>
   );
