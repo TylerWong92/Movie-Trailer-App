@@ -16,7 +16,7 @@ export const MovieCarousel = (props) => {
   // Display Functions //
   const [videoId, setVideoId] = useState("76600");
 
-  const handleHover = (id) => {
+  const handleCoverClick = (id) => {
     setVideoId(id);
   };
 
@@ -92,7 +92,7 @@ export const MovieCarousel = (props) => {
               <div
                 key={d.id}
                 // onClick={() => handleClick(d.id)}
-                onMouseEnter={() => handleHover(d.id)}
+                onClick={() => handleCoverClick(d.id)}
               >
                 <React.Fragment key={d.id}>
                   <MovieCover
