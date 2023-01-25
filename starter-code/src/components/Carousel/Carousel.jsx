@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import DisplayMovie from "../DisplayMovie";
 import MovieCover from "../MovieCover";
 import { useNavigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 export const MovieCarousel = (props) => {
   const [movieId, setMovieId] = useState("76600");
@@ -90,6 +91,15 @@ export const MovieCarousel = (props) => {
                 popularity={d.popularity}
                 rating={d.vote_average}
               />
+              <Link
+                to="/movieinner"
+                onClick={() => {
+                  console.log(`${movieId} + my current slection`);
+                }}
+              >
+                {" "}
+                More Detail
+              </Link>
             </React.Fragment>
           </div>
         );

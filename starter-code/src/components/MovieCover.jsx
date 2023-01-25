@@ -1,7 +1,6 @@
 import React from "react";
 import css from "./MovieCover.css";
 import { useNavigate } from "react-router-dom";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 const MovieCover = (props) => {
   return (
@@ -14,7 +13,6 @@ const MovieCover = (props) => {
         {props.releaseDate && (
           <h5 className="releaseDate">{props.releaseDate}</h5>
         )}
-        <Link to="/movieinner"> More Detail</Link>
       </div>
     </div>
   );
