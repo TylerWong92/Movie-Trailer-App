@@ -49,3 +49,20 @@
   padding: 20px;
   background-color: black;
 }
+/*////////////////////////////////////////////////////*/
+/*Css for page innerpage*/
+
+.containertop {
+  display: flex;
+  background-color: red;
+  padding: 10px;
+  gap: 10px;
+}
+
+.containertop .col {
+  background-color: green;
+}
+.genres {
+  display: flex;
+  gap: 10px;
+}
