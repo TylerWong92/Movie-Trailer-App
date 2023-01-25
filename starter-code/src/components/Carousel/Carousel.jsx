@@ -86,6 +86,14 @@ export const MovieCarousel = (props) => {
     <React.Fragment>
       <DisplayMovie id={videoId} />
       <Slider className="slider" {...settings}>
+        <div>
+          <h1 className="sectiontitle">Now Showing</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation{" "}
+          </p>
+        </div>
         {props.nowPlaying &&
           props.nowPlaying.results.map((d) => {
             return (

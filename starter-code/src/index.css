@@ -16,7 +16,14 @@
   font-size: medium;
   color: #fff;
   text-shadow: 0 0 7px #fff;
-  margin-left: 30px;
+  margin-left: 20px;
+}
+p {
+  font-size: 15px;
+  margin-left: 20px;
+  margin-right: 25px;
+  color: rgba(255, 255, 255, 0.443);
+  font-weight: 200;
 }
 .latestList {
   display: flex;
