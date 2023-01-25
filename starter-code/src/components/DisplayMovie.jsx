@@ -10,7 +10,7 @@ const DisplayMovie = (props) => {
   if (error) console.log(error);
 
   const movieLink = data?.results.map((d, i) => {
-    console.log(d.key);
+    // console.log(d.key);
     return d.key;
   });
   /// key return arrays of video link, movieLink[0] display just the first video

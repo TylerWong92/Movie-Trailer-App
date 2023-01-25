@@ -1,17 +1,18 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import useFetch from "../hook/useFetch";
+import { useParams } from "react-router-dom";
 
-const MovieInner = (props) => {
+const MovieInner = () => {
   let navigate = useNavigate();
-  // let { moviename } = useParams();
-  //movie need to prop in live data id from
-  //Fetch Now Playing Movies, pass data to <LatestMovie/>
-  const { data, loading, error, refetch } = useFetch(
-    `https://api.themoviedb.org/3/movie/324668?api_key=${props.onSelection}a0b33df9cdbafd8ad11d7ad3049&language=en-US`
+  const { id } = useParams();
+  console.log(`${id} params pass from carousel`);
+  const { data, loading, error } = useFetch(
+    `https://api.themoviedb.org/3/movie/${id}?api_key=35358a0b33df9cdbafd8ad11d7ad3049&language=en-US`
   );
   if (loading) return <h1> LOADING... </h1>;
   if (error) console.log(error);
+  // 536554
 
   return (
     <div>
@@ -68,4 +69,3 @@ const MovieInner = (props) => {
 };
 
 export default MovieInner;
-// This is the movie content for {moviename}!

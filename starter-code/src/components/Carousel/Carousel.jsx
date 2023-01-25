@@ -2,17 +2,16 @@ import Slider from "react-slick";
 import "./Carousel.css";
 import "./CarouselTheme.css";
 import React, { useState } from "react";
-import DisplayMovie from "../DisplayMovie";
 import MovieCover from "../MovieCover";
 import { useNavigate } from "react-router-dom";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 export const MovieCarousel = (props) => {
   const [movieId, setMovieId] = useState("76600");
 
+  const navigate = useNavigate();
+
   const handleClick = (id) => {
-    setMovieId(id);
-    props.onSelection(movieId);
+    navigate(`/movieinner/${id}`);
   };
 
   const settings = {
@@ -79,31 +78,23 @@ export const MovieCarousel = (props) => {
 
   return (
     <Slider className="slider" {...settings}>
-      {props.nowPlaying?.results.map((d) => {
-        return (
-          <div onClick={() => handleClick(d.id)} key={d.id}>
-            <React.Fragment key={d.id}>
-              <MovieCover
-                poster={`https://image.tmdb.org/t/p/w200/${
-                  d.poster_path || d.backdrop_path
-                }`}
-                title={d.title}
-                popularity={d.popularity}
-                rating={d.vote_average}
-              />
-              <Link
-                to="/movieinner"
-                onClick={() => {
-                  console.log(`${movieId} + my current slection`);
-                }}
-              >
-                {" "}
-                More Detail
-              </Link>
-            </React.Fragment>
-          </div>
-        );
-      })}
+      {props.nowPlaying &&
+        props.nowPlaying.results.map((d) => {
+          return (
+            <div key={d.id} onClick={() => handleClick(d.id)}>
+              <React.Fragment key={d.id}>
+                <MovieCover
+                  poster={`https://image.tmdb.org/t/p/w200/${
+                    d.poster_path || d.backdrop_path
+                  }`}
+                  title={d.title}
+                  popularity={d.popularity}
+                  rating={d.vote_average}
+                />
+              </React.Fragment>
+            </div>
+          );
+        })}
     </Slider>
   );
 };
