@@ -2,25 +2,11 @@
 * {
   margin: 0;
   padding: 0;
+  background-color: black;
 }
-/* .nav {
-  background-color: rgb(17, 17, 17);
-  position: sticky;
-  top: 0;
-  width: 100%;
-  margin-top: -50px;
-  padding: 20px;
-} */
+
 .youtube {
-  /* margin-top: -50px; */
-  height: 65vh;
-  background: radial-gradient(
-    ellipse at top left,
-    rgba(0, 0, 0, 0.6) 0%,
-    rgba(0, 0, 0, 0) 90%
-  );
-  z-index: -1;
-  position: relative;
+  transform: scale(1.7);
 }
 .youtube iframe {
 }
