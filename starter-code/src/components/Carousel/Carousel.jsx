@@ -2,16 +2,22 @@ import Slider from "react-slick";
 import "./Carousel.css";
 import "./CarouselTheme.css";
 import React, { useState } from "react";
-import MovieCover from "../MovieCover";
+import MovieCover from "../MovieCover/MovieCover";
 import { useNavigate } from "react-router-dom";
+import DisplayMovie from "../DisplayMovie";
 
 export const MovieCarousel = (props) => {
-  const [movieId, setMovieId] = useState("76600");
-
   const navigate = useNavigate();
 
   const handleClick = (id) => {
     navigate(`/movieinner/${id}`);
+  };
+
+  // Display Functions //
+  const [videoId, setVideoId] = useState("76600");
+
+  const handleHover = (id) => {
+    setVideoId(id);
   };
 
   const settings = {
@@ -77,24 +83,31 @@ export const MovieCarousel = (props) => {
   };
 
   return (
-    <Slider className="slider" {...settings}>
-      {props.nowPlaying &&
-        props.nowPlaying.results.map((d) => {
-          return (
-            <div key={d.id} onClick={() => handleClick(d.id)}>
-              <React.Fragment key={d.id}>
-                <MovieCover
-                  poster={`https://image.tmdb.org/t/p/w200/${
-                    d.poster_path || d.backdrop_path
-                  }`}
-                  title={d.title}
-                  popularity={d.popularity}
-                  rating={d.vote_average}
-                />
-              </React.Fragment>
-            </div>
-          );
-        })}
-    </Slider>
+    <React.Fragment>
+      <DisplayMovie id={videoId} />
+      <Slider className="slider" {...settings}>
+        {props.nowPlaying &&
+          props.nowPlaying.results.map((d) => {
+            return (
+              <div
+                key={d.id}
+                onClick={() => handleClick(d.id)}
+                onMouseEnter={() => handleHover(d.id)}
+              >
+                <React.Fragment key={d.id}>
+                  <MovieCover
+                    poster={`https://image.tmdb.org/t/p/w200/${
+                      d.poster_path || d.backdrop_path
+                    }`}
+                    title={d.title}
+                    popularity={d.popularity}
+                    rating={d.vote_average}
+                  />
+                </React.Fragment>
+              </div>
+            );
+          })}
+      </Slider>
+    </React.Fragment>
   );
 };

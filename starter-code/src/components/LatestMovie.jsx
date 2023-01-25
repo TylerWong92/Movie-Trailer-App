@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import MovieCover from "./MovieCover";
+import MovieCover from "./MovieCover/MovieCover";
 import DisplayMovie from "./DisplayMovie";
 
 const LatestMovie = (props) => {
