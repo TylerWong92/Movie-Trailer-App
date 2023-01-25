@@ -5,7 +5,7 @@ import useFetch from "../hook/useFetch";
 const MovieInner = () => {
   let navigate = useNavigate();
   // let { moviename } = useParams();
-
+  //movie need to prop in live data id from
   //Fetch Now Playing Movies, pass data to <LatestMovie/>
   const { data, loading, error, refetch } = useFetch(
     `https://api.themoviedb.org/3/movie/324668?api_key=35358a0b33df9cdbafd8ad11d7ad3049&language=en-US`

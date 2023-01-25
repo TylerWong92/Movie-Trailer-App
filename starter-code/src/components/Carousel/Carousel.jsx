@@ -10,6 +10,7 @@ export const MovieCarousel = (props) => {
 
   const handleClick = (id) => {
     setMovieId(id);
+    props.onSelection(movieId);
   };
 
   const settings = {

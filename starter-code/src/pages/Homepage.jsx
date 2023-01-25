@@ -1,5 +1,4 @@
 import React from "react";
-
 import useFetch from "../hook/useFetch";
 import LatestMovie from "../components/LatestMovie";
 import Upcoming from "../components/Upcoming";
@@ -15,10 +14,14 @@ const Homepage = () => {
   if (loading) return <h1> LOADING... </h1>;
   if (error) console.log(error);
 
+  const getMovieId = (data) => {
+    console.log(data);
+  };
+
   return (
     <div className="home">
       <LatestMovie nowPlaying={data} />
-      <MovieCarousel nowPlaying={data} />
+      <MovieCarousel nowPlaying={data} onSelection={getMovieId} />
       <Upcoming />
     </div>
   );
