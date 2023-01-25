@@ -91,7 +91,7 @@ export const MovieCarousel = (props) => {
             return (
               <div
                 key={d.id}
-                onClick={() => handleClick(d.id)}
+                // onClick={() => handleClick(d.id)}
                 onMouseEnter={() => handleHover(d.id)}
               >
                 <React.Fragment key={d.id}>
@@ -102,6 +102,7 @@ export const MovieCarousel = (props) => {
                     title={d.title}
                     popularity={d.popularity}
                     rating={d.vote_average}
+                    detail={() => handleClick(d.id)}
                   />
                 </React.Fragment>
               </div>

@@ -13,6 +13,7 @@ const MovieCover = (props) => {
         {props.releaseDate && (
           <h5 className="releaseDate">{props.releaseDate}</h5>
         )}
+        <button onClick={props.detail}>Detail</button>
       </div>
     </div>
   );
