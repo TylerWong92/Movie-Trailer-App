@@ -12,17 +12,27 @@ const MovieInner = () => {
   );
   if (loading) return <h1> LOADING... </h1>;
   if (error) console.log(error);
-  // 536554
 
   return (
     <div>
       <button
+        className="back-button"
         onClick={() => {
           navigate("/");
         }}
-      >
-        back to home
-      </button>
+      ></button>
+      <div className="wrapper">
+        <img
+          src={`https://image.tmdb.org/t/p/original/${
+            data && data.backdrop_path
+          }`}
+          className="cover-img"
+        />
+      </div>
+      <div className="flex-container">
+        <div className="col-1">h1</div>
+        <div className="col-2">h1</div>
+      </div>
       <div className="containertop">
         <div className="col">
           <img
@@ -32,6 +42,8 @@ const MovieInner = () => {
         </div>
         <div className="col">
           <h5 className="state">{data && data.status}</h5>
+          <h5>{data && data.release_date}</h5>
+          <h1> {data && `${Math.ceil(data.popularity)}`}</h1>
           <h1 className="title">{data && data.original_title}</h1>
           <p className="content">{data && data.overview}</p>
           <div className="genres">
@@ -45,10 +57,13 @@ const MovieInner = () => {
               })}
           </div>
 
-          <h1> {data && `${Math.ceil(data.popularity)}`}</h1>
           <h1 className="tag">{data && data.vote_average}</h1>
-
-          <h1>{data && data.release_date}</h1>
+          <div>
+            {data &&
+              data.production_companies.map((d, i) => {
+                return <h1 key={i.id}>{d.name}</h1>;
+              })}
+          </div>
 
           <button value={data && data.homepage} onClick={data && data.homepage}>
             Watch At
@@ -60,21 +75,9 @@ const MovieInner = () => {
 
         <div className="col2"></div>
       </div>
-
-      {data ? console.log(JSON.stringify(data)) : <h1>error</h1>}
-
-      <img
-        src={`https://image.tmdb.org/t/p/w500/${data && data.backdrop_path}`}
-      />
-
-      <div>
-        {data &&
-          data.production_companies.map((d, i) => {
-            return <h1 key={i.id}>{d.name}</h1>;
-          })}
-      </div>
     </div>
   );
 };
 
 export default MovieInner;
+// {data ? console.log(JSON.stringify(data)) : <h1>error</h1>}

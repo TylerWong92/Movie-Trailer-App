@@ -1,13 +1,15 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import "./navbar.css";
 
 const NavBar = () => {
   return (
-    <nav>
-      <Link to="/"> Home </Link>
-    </nav>
+    <div className="header">
+      <Link to="/">
+        <div></div>
+      </Link>
+    </div>
   );
 };
 
 export default NavBar;
-// <Link to="/movieinner"> Movie Inner Page </Link>

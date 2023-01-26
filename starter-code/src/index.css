@@ -99,3 +99,33 @@ p {
   color: white;
   display: inline-block;
 }
+.back-button {
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: none;
+}
+.wrapper {
+  height: 30vh;
+  z-index: 1;
+  background: linear-gradient(to bottom, transparent, black);
+}
+.cover-img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+}
+
+.col-1,
+.col-2 {
+  width: 50%;
+}
