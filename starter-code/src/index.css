@@ -5,12 +5,12 @@
   background-color: black;
 }
 
-.youtube {
+/* .youtube {
   transform: scale(1.7);
   position: sticky;
   top: 0;
   z-index: 1;
-}
+} */
 
 .sectiontitle {
   font-family: Poppins;
@@ -37,6 +37,11 @@ p {
 .slider {
   padding: 20px;
   background-color: black;
+}
+.mainDisplay {
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 /*////////////////////////////////////////////////////*/

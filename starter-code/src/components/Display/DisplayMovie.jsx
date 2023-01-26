@@ -1,5 +1,5 @@
 import React from "react";
-import useFetch from "../hook/useFetch";
+import useFetch from "../../hook/useFetch";
 
 const DisplayMovie = (props) => {
   //Fetch Movie Trailer - 1. Hero section 2. on hover card
@@ -15,7 +15,7 @@ const DisplayMovie = (props) => {
   });
   /// key return arrays of video link, movieLink[0] display just the first video
   return (
-    <section className="youtube">
+    <section className="mainDisplay">
       {data ? (
         <iframe
           width="100%"

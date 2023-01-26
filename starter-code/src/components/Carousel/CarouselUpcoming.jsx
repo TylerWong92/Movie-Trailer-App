@@ -4,7 +4,7 @@ import "./CarouselUpcomingTheme.css";
 import React, { useState } from "react";
 import MovieCover from "../MovieCover/MovieCover";
 import { useNavigate } from "react-router-dom";
-import DisplayMovie from "../DisplayMovie";
+import DisplayMovie from "../Display/DisplayMovie";
 import useFetch from "../../hook/useFetch";
 
 export const MovieCarouselUpcoming = (props) => {

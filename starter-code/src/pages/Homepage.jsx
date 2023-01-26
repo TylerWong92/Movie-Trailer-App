@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import useFetch from "../hook/useFetch";
 import { MovieCarousel } from "../components/Carousel/Carousel";
 import { MovieCarouselUpcoming } from "../components/Carousel/CarouselUpcoming";
-import DisplayMovie from "../components/DisplayMovie";
+import DisplayMovie from "../components/Display/DisplayMovie";
 
 const Homepage = () => {
   // Display Functions //
