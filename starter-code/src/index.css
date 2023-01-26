@@ -7,9 +7,11 @@
 
 .youtube {
   transform: scale(1.7);
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
-.youtube iframe {
-}
+
 .sectiontitle {
   font-family: Poppins;
   font-weight: 500;
@@ -31,17 +33,12 @@ p {
   justify-content: space-between;
   padding: 20px;
 }
-.testing {
-  background-image: linear-gradient(rgba(255, 0, 0, 0), rgb(0, 0, 0) 75%);
-  z-index: 1;
-}
-.testing2 {
-  background-color: black;
-}
+
 .slider {
   padding: 20px;
   background-color: black;
 }
+
 /*////////////////////////////////////////////////////*/
 /*Css for page innerpage*/
 

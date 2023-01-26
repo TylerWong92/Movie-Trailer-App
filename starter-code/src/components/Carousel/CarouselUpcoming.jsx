@@ -92,7 +92,7 @@ export const MovieCarouselUpcoming = (props) => {
 
   return (
     <React.Fragment>
-      <DisplayMovie id={videoId} />
+      <DisplayMovie className="youtube2" id={videoId} />
       <Slider className="slider" {...settings}>
         <div>
           <h1 className="sectiontitle">Coming Soon</h1>

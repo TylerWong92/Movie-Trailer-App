@@ -97,11 +97,7 @@ export const MovieCarousel = (props) => {
         {props.nowPlaying &&
           props.nowPlaying.results.map((d) => {
             return (
-              <div
-                key={d.id}
-                // onClick={() => handleClick(d.id)}
-                onClick={() => handleCoverClick(d.id)}
-              >
+              <div key={d.id} onClick={() => handleCoverClick(d.id)}>
                 <React.Fragment key={d.id}>
                   <MovieCover
                     poster={`https://image.tmdb.org/t/p/w200/${
