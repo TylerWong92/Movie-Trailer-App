@@ -21,9 +21,9 @@ export const MovieCarouselUpcoming = (props) => {
     setVideoId(id);
   };
 
-  const api = "35358a0b33df9cdbafd8ad11d7ad3049";
+  // Up Coming Movie Api //
   const { data, loading, error } = useFetch(
-    `https://api.themoviedb.org/3/movie/now_playing?api_key=${api}&language=en-US&page=1`
+    `https://api.themoviedb.org/3/movie/upcoming?api_key=35358a0b33df9cdbafd8ad11d7ad3049&language=en-US&page=2`
   );
   if (loading) return <h1> LOADING... </h1>;
   if (error) console.log(error);
@@ -95,7 +95,7 @@ export const MovieCarouselUpcoming = (props) => {
       <DisplayMovie id={videoId} />
       <Slider className="slider" {...settings}>
         <div>
-          <h1 className="sectiontitle">Now Showing</h1>
+          <h1 className="sectiontitle">Coming Soon</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -116,8 +116,7 @@ export const MovieCarouselUpcoming = (props) => {
                       d.poster_path || d.backdrop_path
                     }`}
                     title={d.title}
-                    popularity={d.popularity}
-                    rating={d.vote_average}
+                    releaseDate={d.release_date}
                     detail={() => handleClick(d.id)}
                   />
                 </React.Fragment>

@@ -1,6 +1,5 @@
 import React from "react";
 import useFetch from "../hook/useFetch";
-import Upcoming from "../components/Upcoming";
 import { MovieCarousel } from "../components/Carousel/Carousel";
 import { MovieCarouselUpcoming } from "../components/Carousel/CarouselUpcoming";
 
@@ -17,7 +16,6 @@ const Homepage = () => {
     <div className="home">
       <MovieCarousel nowPlaying={data} />
       <MovieCarouselUpcoming />
-      <Upcoming />
     </div>
   );
 };
