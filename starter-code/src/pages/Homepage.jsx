@@ -16,7 +16,7 @@ const Homepage = () => {
   return (
     <div className="home">
       <MovieCarousel nowPlaying={data} />
-      <MovieCarouselUpcoming nowPlaying={data} />
+      <MovieCarouselUpcoming />
       <Upcoming />
     </div>
   );

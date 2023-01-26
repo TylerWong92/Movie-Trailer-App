@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import MovieCover from "../MovieCover/MovieCover";
 import { useNavigate } from "react-router-dom";
 import DisplayMovie from "../DisplayMovie";
+import useFetch from "../../hook/useFetch";
 
 export const MovieCarouselUpcoming = (props) => {
   const navigate = useNavigate();
@@ -19,6 +20,13 @@ export const MovieCarouselUpcoming = (props) => {
   const handleCoverClick = (id) => {
     setVideoId(id);
   };
+
+  const api = "35358a0b33df9cdbafd8ad11d7ad3049";
+  const { data, loading, error } = useFetch(
+    `https://api.themoviedb.org/3/movie/now_playing?api_key=${api}&language=en-US&page=1`
+  );
+  if (loading) return <h1> LOADING... </h1>;
+  if (error) console.log(error);
 
   const settings = {
     dots: true,
@@ -94,8 +102,8 @@ export const MovieCarouselUpcoming = (props) => {
             ad minim veniam, quis nostrud exercitation{" "}
           </p>
         </div>
-        {props.nowPlaying &&
-          props.nowPlaying.results.map((d) => {
+        {data &&
+          data.results.map((d) => {
             return (
               <div
                 key={d.id}
