@@ -2,6 +2,7 @@ import React from "react";
 import useFetch from "../hook/useFetch";
 import Upcoming from "../components/Upcoming";
 import { MovieCarousel } from "../components/Carousel/Carousel";
+import { MovieCarouselUpcoming } from "../components/Carousel/CarouselUpcoming";
 
 const Homepage = () => {
   const api = "35358a0b33df9cdbafd8ad11d7ad3049";
@@ -15,6 +16,7 @@ const Homepage = () => {
   return (
     <div className="home">
       <MovieCarousel nowPlaying={data} />
+      <MovieCarouselUpcoming nowPlaying={data} />
       <Upcoming />
     </div>
   );
