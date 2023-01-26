@@ -14,14 +14,16 @@ const MovieInner = () => {
   if (error) console.log(error);
 
   return (
-    <div>
-      <button
-        className="back-button"
-        onClick={() => {
-          navigate("/");
-        }}
-      ></button>
+    <div className="mainwrapper">
       <div className="wrapper">
+        <button
+          className="back-button"
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          &lsaquo;
+        </button>
         <img
           src={`https://image.tmdb.org/t/p/original/${
             data && data.backdrop_path
@@ -29,55 +31,48 @@ const MovieInner = () => {
           className="cover-img"
         />
       </div>
-      <div className="flex-container">
-        <div className="col-1">h1</div>
-        <div className="col-2">h1</div>
-      </div>
-      <div className="containertop">
-        <div className="col">
-          <img
-            className="movieCover"
-            src={`https://image.tmdb.org/t/p/w500/${data && data.poster_path}`}
-          />
-        </div>
-        <div className="col">
-          <h5 className="state">{data && data.status}</h5>
-          <h5>{data && data.release_date}</h5>
-          <h1> {data && `${Math.ceil(data.popularity)}`}</h1>
-          <h1 className="title">{data && data.original_title}</h1>
-          <p className="content">{data && data.overview}</p>
-          <div className="genres">
-            {data &&
-              data.genres.map((d, i) => {
-                return (
-                  <div className="genres" key={i.id}>
-                    {d.name}
-                  </div>
-                );
-              })}
+      <div className="grid-box">
+        <section className="grid">
+          <div className="col">
+            <img
+              className="movieCover"
+              src={`https://image.tmdb.org/t/p/w500/${
+                data && data.poster_path
+              }`}
+            />
           </div>
+          <div className="col">
+            <h5 className="state">{data && data.status}</h5>
+            <h5>{data && data.release_date}</h5>
 
-          <h1 className="tag">{data && data.vote_average}</h1>
-          <div>
-            {data &&
-              data.production_companies.map((d, i) => {
-                return <h1 key={i.id}>{d.name}</h1>;
-              })}
+            <h1 className="title">{data && data.original_title}</h1>
+            <p className="content">{data && data.overview}</p>
+            <div className="genres">
+              {data &&
+                data.genres.map((d, i) => {
+                  return (
+                    <div className="genres" key={i.id}>
+                      {d.name}
+                    </div>
+                  );
+                })}
+            </div>
+            <h1 className="tag">{data && data.vote_average}</h1>
+            <div className="companieswrap">
+              {data &&
+                data.production_companies.map((d, i) => {
+                  return (
+                    <h5 className="companies" key={i.id}>
+                      {d.name}
+                    </h5>
+                  );
+                })}
+            </div>
           </div>
-
-          <button value={data && data.homepage} onClick={data && data.homepage}>
-            Watch At
-          </button>
-        </div>
-      </div>
-      <div className="mainwrap">
-        <div className="col1"></div>
-
-        <div className="col2"></div>
+        </section>
       </div>
     </div>
   );
 };
 
 export default MovieInner;
-// {data ? console.log(JSON.stringify(data)) : <h1>error</h1>}

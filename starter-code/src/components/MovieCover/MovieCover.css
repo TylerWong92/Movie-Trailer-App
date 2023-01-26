@@ -6,9 +6,7 @@
   transform: scale(1.05);
   transition: transform 0.2s ease-in-out;
 }
-.movieCard:active {
-  border: 1px solid white;
-}
+
 .cover {
   margin: 0.5rem;
   width: 200px;

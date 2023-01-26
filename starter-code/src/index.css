@@ -5,13 +5,6 @@
   background-color: black;
 }
 
-/* .youtube {
-  transform: scale(1.7);
-  position: sticky;
-  top: 0;
-  z-index: 1;
-} */
-
 .sectiontitle {
   font-family: Poppins;
   font-weight: 500;
@@ -68,6 +61,8 @@ p {
   font-size: 0.8rem;
   color: rgb(55, 255, 0);
   text-decoration: underline;
+  background-color: transparent;
+  padding-top: 3rem;
 }
 .title {
   width: 100%;
@@ -76,6 +71,7 @@ p {
   text-transform: capitalize;
   font-size: 2rem;
   color: #fff;
+  background-color: transparent;
 }
 .content {
   font-family: Poppins;
@@ -83,6 +79,7 @@ p {
   padding: 0px;
   margin: 0px;
   font-size: 0.8rem;
+  background-color: transparent;
 }
 .genres > .genres {
   margin-top: 10px;
@@ -90,6 +87,10 @@ p {
   border: 1px solid white;
   border-radius: 5px;
   color: white;
+  background-color: transparent;
+}
+.genres {
+  background-color: transparent;
 }
 .tag {
   margin-top: 10px;
@@ -98,6 +99,20 @@ p {
   border-radius: 5px;
   color: white;
   display: inline-block;
+  background-color: transparent;
+}
+
+.wrapper {
+  position: relative;
+  height: 45vh;
+}
+
+.wrapper::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, black);
 }
 .back-button {
   color: white;
@@ -106,26 +121,96 @@ p {
   height: 50px;
   border: none;
 }
-.wrapper {
-  height: 30vh;
-  z-index: 1;
-  background: linear-gradient(to bottom, transparent, black);
+@media (max-width: 600px) {
+  .wrapper {
+    display: none;
+  }
 }
 .cover-img {
   top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top;
 }
-.flex-container {
-  display: flex;
-  justify-content: space-between;
+
+.mainwrapper {
+  position: relative;
+}
+.back-button {
+  position: absolute;
+  margin: 50px;
+  background-color: rgba(16, 16, 16, 0.859);
+  font-size: 2rem;
+  padding-bottom: 15px;
+}
+/* 
+///////// */
+.grid-box {
   max-width: 1200px;
+  margin: 0 auto;
 }
 
-.col-1,
-.col-2 {
-  width: 50%;
+.grid-box .grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid-box .grid .col {
+  flex: 1;
+  padding: 20px;
+  z-index: 10;
+}
+@media (max-width: 600px) {
+  .grid-box .grid .col {
+    padding: 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-box .grid {
+    flex-direction: column;
+  }
+}
+
+.col {
+  margin-top: -16rem;
+  background-color: transparent;
+  padding: 100px;
+}
+@media (max-width: 600px) {
+  .col {
+    margin-top: 0;
+  }
+}
+.movieCover {
+  border-radius: 10px;
+}
+h5 {
+  background-color: transparent;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .col:last-of-type {
+    margin-left: 20px;
+    margin-right: 30px;
+  }
+}
+.companieswrap {
+  border: 1px solid rgba(255, 255, 255, 0.274);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+.companies {
+  font-family: Poppins;
+  font-weight: 300;
+  padding: 0px;
+  margin: 0px;
+  font-size: 1rem;
+  background-color: transparent;
+  display: inline-flex;
+  gap: 30;
+  color: rgba(255, 255, 255, 0.274);
 }
