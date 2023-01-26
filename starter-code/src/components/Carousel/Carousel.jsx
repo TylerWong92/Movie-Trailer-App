@@ -4,20 +4,12 @@ import "./CarouselTheme.css";
 import React, { useState } from "react";
 import MovieCover from "../MovieCover/MovieCover";
 import { useNavigate } from "react-router-dom";
-import DisplayMovie from "../DisplayMovie";
 
 export const MovieCarousel = (props) => {
   const navigate = useNavigate();
 
   const handleClick = (id) => {
     navigate(`/movieinner/${id}`);
-  };
-
-  // Display Functions //
-  const [videoId, setVideoId] = useState("76600");
-
-  const handleCoverClick = (id) => {
-    setVideoId(id);
   };
 
   const settings = {
@@ -84,7 +76,6 @@ export const MovieCarousel = (props) => {
 
   return (
     <React.Fragment>
-      <DisplayMovie id={videoId} />
       <Slider className="slider" {...settings}>
         <div>
           <h1 className="sectiontitle">Now Showing</h1>
@@ -97,7 +88,7 @@ export const MovieCarousel = (props) => {
         {props.nowPlaying &&
           props.nowPlaying.results.map((d) => {
             return (
-              <div key={d.id} onClick={() => handleCoverClick(d.id)}>
+              <div key={d.id} onClick={() => props.handleCoverClick(d.id)}>
                 <React.Fragment key={d.id}>
                   <MovieCover
                     poster={`https://image.tmdb.org/t/p/w200/${

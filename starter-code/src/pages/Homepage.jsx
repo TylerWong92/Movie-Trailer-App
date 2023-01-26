@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import useFetch from "../hook/useFetch";
 import { MovieCarousel } from "../components/Carousel/Carousel";
 import { MovieCarouselUpcoming } from "../components/Carousel/CarouselUpcoming";
+import DisplayMovie from "../components/DisplayMovie";
 
 const Homepage = () => {
+  // Display Functions //
+  const [videoId, setVideoId] = useState("76600");
+
+  const handleCoverClick = (id) => {
+    setVideoId(id);
+  };
+
   const api = "35358a0b33df9cdbafd8ad11d7ad3049";
 
   const { data, loading, error, refetch } = useFetch(
@@ -14,8 +22,9 @@ const Homepage = () => {
 
   return (
     <div className="home">
-      <MovieCarousel nowPlaying={data} />
-      <MovieCarouselUpcoming />
+      <DisplayMovie id={videoId} />
+      <MovieCarousel nowPlaying={data} handleCoverClick={handleCoverClick} />
+      <MovieCarouselUpcoming handleCoverClick={handleCoverClick} />
     </div>
   );
 };

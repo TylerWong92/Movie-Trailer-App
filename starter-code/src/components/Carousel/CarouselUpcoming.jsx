@@ -14,13 +14,6 @@ export const MovieCarouselUpcoming = (props) => {
     navigate(`/movieinner/${id}`);
   };
 
-  // Display Functions //
-  const [videoId, setVideoId] = useState("76600");
-
-  const handleCoverClick = (id) => {
-    setVideoId(id);
-  };
-
   // Up Coming Movie Api //
   const { data, loading, error } = useFetch(
     `https://api.themoviedb.org/3/movie/upcoming?api_key=35358a0b33df9cdbafd8ad11d7ad3049&language=en-US&page=2`
@@ -92,7 +85,6 @@ export const MovieCarouselUpcoming = (props) => {
 
   return (
     <React.Fragment>
-      <DisplayMovie className="youtube2" id={videoId} />
       <Slider className="slider" {...settings}>
         <div>
           <h1 className="sectiontitle">Coming Soon</h1>
@@ -108,7 +100,7 @@ export const MovieCarouselUpcoming = (props) => {
               <div
                 key={d.id}
                 // onClick={() => handleClick(d.id)}
-                onClick={() => handleCoverClick(d.id)}
+                onClick={() => props.handleCoverClick(d.id)}
               >
                 <React.Fragment key={d.id}>
                   <MovieCover
