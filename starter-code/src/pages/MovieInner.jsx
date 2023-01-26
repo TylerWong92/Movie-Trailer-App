@@ -31,19 +31,28 @@ const MovieInner = () => {
           />
         </div>
         <div className="col">
+          <h5 className="state">{data && data.status}</h5>
+          <h1 className="title">{data && data.original_title}</h1>
+          <p className="content">{data && data.overview}</p>
           <div className="genres">
             {data &&
               data.genres.map((d, i) => {
-                return <h1 key={i.id}>{d.name}</h1>;
+                return (
+                  <div className="genres" key={i.id}>
+                    {d.name}
+                  </div>
+                );
               })}
           </div>
-          <h1>{data && data.original_title}</h1>
-          <h1>{data && data.popularity}</h1>
-          <h1>{data && data.vote_average}</h1>
-          <h1>{data && data.status}</h1>
+
+          <h1> {data && `${Math.ceil(data.popularity)}`}</h1>
+          <h1 className="tag">{data && data.vote_average}</h1>
+
           <h1>{data && data.release_date}</h1>
-          <p>{data && data.overview}</p>
-          <h1>{data && data.homepage}</h1>
+
+          <button value={data && data.homepage} onClick={data && data.homepage}>
+            Watch At
+          </button>
         </div>
       </div>
       <div className="mainwrap">
