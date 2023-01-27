@@ -5,9 +5,7 @@ import "./navbar.css";
 const NavBar = () => {
   return (
     <div className="header">
-      <Link to="/">
-        <div></div>
-      </Link>
+      <Link to="/"></Link>
     </div>
   );
 };
