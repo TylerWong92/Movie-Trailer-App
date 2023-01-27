@@ -1,12 +1,15 @@
-#Netflix Clone With Autoplaying Video Carousel
-![Demo](./components/assets/AppDemo.gif)
+### Netflix Clone With Autoplaying Video Carousel
 
-####Overview
+![Demo](./src/components/assets/AppDemo.gif)
+
+### Overview
+
 Create a Movie trailer app using The Movie Data API to retrieve the latest movie and upcoming movie data. Users would be able to browse through the movie covers and watch the trailer upon clicking the movie cover. Get the movie synopsis with a click of the view button under the cover.
 
 ---
 
-####Documentation (API)
+### Documentation (API)
+
 Im using React custom hook and "axios" to fetch my data under my hook folder.
 
 Homepage.jsx line.17
@@ -38,7 +41,7 @@ const { data, loading, error, refetch } = useFetch(
 
 ### APP Hierarchy
 
-![TEXT](../src/components/assets/Hierarchy.png)
+![TEXT](./src/components/assets/Hierarchy.png)
 
 Table of Contents:
 App.js : Router 6 for moving home to inner-page
