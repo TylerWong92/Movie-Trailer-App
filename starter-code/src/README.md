@@ -38,20 +38,26 @@ const { data, loading, error, refetch } = useFetch(
 
 ### APP Hierarchy
 
-![TEXT](../public/ga.ico)
+![TEXT](../src/components/assets/Hierarchy.png)
 
 Table of Contents:
-MyCustom hook to Fetch API
-Router 6 for moving home to inner page
-Carousell slider (react-slide)
-Display - iframe
-reusable component
-innerpages
+App.js : Router 6 for moving home to inner-page
+Homepage : Display and Carousel
+Reusable component : MovieCover
+Movieinner: MovieInner.jsx
+
+Css folder structure Eg:
+Example.jsx
+Example.css
+
+```
+The only exception .css for MovieInner.jsx is in index.css
+```
 
 ---
 
-##BUILD WITH
+####BUILD WITH
 
-![TEXT](../public/ga.ico)
+<a title="Facebook, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:React-icon.svg"><img width="32" alt="React-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/32px-React-icon.svg.png"></a>
 
 ---
