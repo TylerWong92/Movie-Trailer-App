@@ -158,9 +158,10 @@ p {
 
 .grid-box .grid .col {
   flex: 1;
-  padding: 20px;
+  padding: 10px;
   z-index: 10;
 }
+
 @media (max-width: 600px) {
   .grid-box .grid .col {
     padding: 0px;
@@ -200,7 +201,8 @@ h5 {
 .companieswrap {
   border: 1px solid rgba(255, 255, 255, 0.274);
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 6px;
+  margin-top: 5px;
   margin-bottom: 50px;
 }
 .companies {
